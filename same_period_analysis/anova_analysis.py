@@ -41,3 +41,26 @@ anova_results = sm.stats.anova_lm(model, typ=2)
 
 # ANOVA summary & Regression summary
 anova_results, model.summary()
+
+
+
+#### new model: including the high-rating dummy
+df['high_rating_dummy'] = (df['averageRating'] > 7).astype(int)
+
+model_formula = 'profit ~ production_budget + same_period_profit + same_period_budget + high_rating_dummy + high_rating_dummy:same_period_profit + high_rating_dummy:same_period_budget'
+model = ols(model_formula, data=df).fit()
+print(model.summary())
+
+
+model_formula = """
+profit ~ production_budget + 
+         same_period_indicator + 
+         same_period_profit + 
+         same_period_budget + 
+         high_rating_dummy + 
+         high_rating_dummy:same_period_indicator + 
+         high_rating_dummy:same_period_profit + 
+         high_rating_dummy:same_period_budget
+"""
+model = ols(model_formula, data=df).fit()
+print(model.summary())
