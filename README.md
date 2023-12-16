@@ -1,5 +1,5 @@
 # MGT4187-Project
-Project repository of the course MGT4187 in CUHK(SZ)
+Project repository of the course MGT4187 in CUHK(SZ). This repo has been archived.
 
 ## Variable Description
 
@@ -28,20 +28,10 @@ Project repository of the course MGT4187 in CUHK(SZ)
 | `numVotes`          | Number of votes the title has received.                      |
 
 
-## Data Overview
-
 
 ## TO DO LIST
 
-- [x] Exploratory Data Analysis
-- [x] Data supplement
-    - we need to supplement the profit & production data...
-
-- [ ] Clustering algorithm (K-means) -- Yinqi
-- [ ] Regression model --Zhiming
-- [ ] Sentiment analysis code --Zhiming
-
-
+All finished!
 
 ## Reference
 
